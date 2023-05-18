@@ -7,21 +7,21 @@ const userSchema = new mongoose.Schema({
   },
   lastName: {
     type: String,
-    require: true
+    required: true,
   },
   email: {
     type: String,
-    required: true,
+    required: true 
   },
   password: {
     type: String,
-    require: true,
-    min: 6,
+    required: true,
+    min: 6
   },
   date: {
     type: Date,
     default: Date.now
   }
-});
+})
 
 module.exports = mongoose.model('User', userSchema);
