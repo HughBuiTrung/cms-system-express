@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const todoSchema = new mongoose.Schema({
   title: {
@@ -7,7 +7,7 @@ const todoSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    require: true
+    require: true,
   },
   member: {
     type: Array,
@@ -18,8 +18,8 @@ const todoSchema = new mongoose.Schema({
   },
   date: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 });
 
-module.exports = mongoose.model('Todo', todoSchema);
+module.exports = mongoose.model("Todo", todoSchema);

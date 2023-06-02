@@ -9,6 +9,7 @@ const todosRoutes = require("./routes/todos");
 const authRoute = require("./routes/auth");
 const usersRoute = require("./routes/users");
 const listsRoute = require("./routes/lists");
+const columnRoute = require("./routes/columns");
 
 dotenv.config();
 app.use(cors());
@@ -30,6 +31,7 @@ app.use("/api/todo", todosRoutes);
 app.use("/api/auth", authRoute);
 app.use("/api/user", usersRoute);
 app.use("/api/list", listsRoute);
+app.use("/api/column", columnRoute);
 
 // listen apps
 const PORT = process.env.PORT || 4002;
